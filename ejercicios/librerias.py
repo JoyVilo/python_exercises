@@ -10,9 +10,9 @@ while True:
 
     if intento == numero_secreto: 
         print(f"adivinaste en {intentos} intentos")
+        break
     elif intentos == 3:
         print(f"perdiste, el numero era {numero_secreto}")
-        break
     elif intento < numero_secreto:
         print("Muy bajo")
     else:
