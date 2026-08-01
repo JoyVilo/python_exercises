@@ -16,8 +16,8 @@ while True:
         archivo.close()
     elif opcion == "3":
         archivo = open("cisneros.txt", "r")
-        for linea in archivo:
-            partes = linea.split(",")
+        for linea in archivo: #recorre el archivo linea por linea 
+            partes = linea.split(",") #lo corta y convierte el texto en una lista
             alumno = partes[0]
             nota = int(partes[1])
             if nota > 3:
