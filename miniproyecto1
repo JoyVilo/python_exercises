@@ -1,0 +1,30 @@
+
+while True:
+    opcion = input("¿Qué quieres hacer?(1/2/3/4)")
+    if opcion == "1":
+        try: 
+            alumno = input("Agrega el nombre:  ")
+            nota = int(input("añade la nota"))
+            archivo = open("cisneros.txt", "a")
+            archivo.write(f"{alumno}, {nota}\n")
+            archivo.close()
+        except:
+            print("No es valido")
+    elif opcion == "2":
+        archivo = open("cisneros.txt", "r")
+        print(archivo.read())
+        archivo.close()
+    elif opcion == "3":
+        archivo = open("cisneros.txt", "r")
+        for linea in archivo:
+            partes = linea.split(",")
+            alumno = partes[0]
+            nota = int(partes[1])
+            if nota > 3:
+                print("Pasaste al año xoxo")
+            else: 
+                print("Yaper hija mia")
+        archivo.close()
+    elif opcion == "4":
+        print("Sesión finalizada")
+        break

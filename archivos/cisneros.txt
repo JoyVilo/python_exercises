@@ -1,0 +1,6 @@
+isa, 4
+vane, 5
+vero, 2
+marga, 5
+alvaro, 2
+ulises, 1
